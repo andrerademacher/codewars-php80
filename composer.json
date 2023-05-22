@@ -1,0 +1,34 @@
+{
+    "name": "andrerademacher/codewars-php80",
+    "description": "Minimalistic PHP 8.0 environment for codewars",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "keywords": [
+        "codewars",
+        "php"
+    ],
+    "authors": [
+        {
+            "name": "Andre Rademacher",
+            "email": "andre.rademacher.business@googlemail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "require": {
+        "php": "^8.0",
+        "ext-mbstring": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kata\\": "kata"
+        }
+    },
+    "scripts": {
+        "qa": [
+            "phpunit"
+        ],
+        "phpunit": "phpunit"
+    }
+}
