@@ -1,0 +1,9 @@
+# IDEs
+.idea
+
+# caching
+.phpunit.result.cache
+
+# composer files
+composer.phar
+vendor/
