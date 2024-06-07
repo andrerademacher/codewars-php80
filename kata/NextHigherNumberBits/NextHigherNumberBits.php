@@ -9,8 +9,7 @@ final class NextHigherNumberBits
     public function nextHigher(int $number): int
     {
         $getNumberOfOnes = static fn(int $number) => strlen(strtr(decbin($number), ['0' => '']));
-        $numberOfOnes = $getNumberOfOnes($number);
-        for ($nextHigher = $number + 1; $getNumberOfOnes($nextHigher) !== $numberOfOnes; $nextHigher++) {}
-        return $nextHigher;
+        for ($numberOfOnes = $getNumberOfOnes($number); $getNumberOfOnes(++$number) !== $numberOfOnes; ) {}
+        return $number;
     }
 }
